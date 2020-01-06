@@ -1,3 +1,3 @@
-module git.wark.io/www/rss-go
+module git.wark.io/lib/rss-go
 
 go 1.13

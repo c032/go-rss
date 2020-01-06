@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	rss "git.wark.io/www/rss-go"
+	rss "git.wark.io/lib/rss-go"
 )
 
 const rss2File = "testdata/rss-2.0.rss"
