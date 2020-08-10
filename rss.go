@@ -26,6 +26,7 @@ type RSSChannelItem struct {
 	Link        string                   `xml:"link"`
 	GUID        RSSChannelItemGUID       `xml:"guid"`
 	RawPubDate  string                   `xml:"pubDate"`
+	Enclosure   *RSSChannelItemEnclosure `xml:"enclosure"`
 	Categories  []RSSChannelItemCategory `xml:"category"`
 }
 
@@ -36,6 +37,12 @@ type RSSChannelItemCategory struct {
 type RSSChannelItemGUID struct {
 	Content        string `xml:",chardata"`
 	RawIsPermaLink string `xml:"isPermaLink,attr"`
+}
+
+type RSSChannelItemEnclosure struct {
+	URL    string `xml:"url,attr"`
+	Type   string `xml:"type,attr"`
+	Length int    `xml:"length,attr"`
 }
 
 func Parse(r io.Reader) (*RSS, error) {
